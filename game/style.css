@@ -19,11 +19,14 @@
 /* Set background / general styles */
 
 body {
-    background-color: #FFF;
-    color: #413232;
+   background-image: url(media/MO.gif);
+    color: #ffffff;
     font-family: 'Acme', sans-serif;
     font-weight: 800;
     letter-spacing: 2px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /* Nav holds the heading and game control buttons
