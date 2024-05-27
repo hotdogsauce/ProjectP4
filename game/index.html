@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Hunter</title>
+    <link rel="shortcut icon" type="image/svg" href="media/logo.webp" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        
+            <img class="brand" src="media/logo.webp" alt="ufo brand image">
+        
+        <h1>Student Hunter</h1>
+
+        <!-- Buttons to flip all cards for set time, reset game & clear wins -->
+        <div>
+            <button class="flip-btn" onclick="flipAll()">Preview Cards</button>
+            <button class="reset-game-btn" onclick="reset()">Reset Game</button>
+            <button class="reset-wins-btn" onclick="resetWinHistory()">
+                Reset Total Victories
+            </button>
+           
+        </div>
+
+    </nav>
+
+    <!-- UI section with game control buttons and interface -->
+    <section class="ui">
+
+        <!-- The HUD: who VS who, and messages for whose turn it is -->
+        <div id="pvp-display"></div>
+        <div id="msg-display"></div>
+
+        <!-- Displays the winner of the game at the end (if no draw) -->
+        <div class="span-container">
+            <span id="winner-title"></span>
+            <span id="winner-name"></span>
+        </div>
+
+    </section>
+
+    <!-- Scoreboard -->
+    <table>
+
+        <caption>SCOREBOARD</caption>
+
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>CURRENT GAME SCORE</th>
+                <th>
+                    VETERAN RANK<img src="media/awards/veteran-medal.svg" class="medal-title" />
+                </th>
+                <th>
+                    PROFESSIONAL RANK<img src="media/awards/professional-medal.svg" class="medal-title" />
+                </th>
+                <th>
+                    ELITE RANK<img src="media/awards/elite-medal.svg" class="medal-title" />
+                </th>
+                <th>TOTAL VICTORIES</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td id="player-1-name"></td>
+                <td id="player-1-score"></td>
+                <td id="player-1-veteran">
+                    <img id="p1-vet" src="media/awards/veteran-medal.svg" class="medal-image" />
+                </td>
+                <td id="player-1-professional">
+                    <img id="p1-pro" src="media/awards/professional-medal.svg" class="medal-image" />
+                </td>
+                <td id="player-1-elite">
+                    <img id="p1-elite" src="media/awards/elite-medal.svg" class="medal-image" />
+                </td>
+                <td id="player-1-victories"></td>
+            </tr>
+            <tr>
+                <td id="player-2-name"></td>
+                <td id="player-2-score"></td>
+                <td id="player-2-veteran">
+                    <img id="p2-vet" src="media/awards/veteran-medal.svg" class="medal-image" />
+                </td>
+                <td id="player-2-professional">
+                    <img id="p2-pro" src="media/awards/professional-medal.svg" class="medal-image" />
+                </td>
+                <td id="player-2-elite">
+                    <img id="p2-elite" src="media/awards/elite-medal.svg" class="medal-image" />
+                </td>
+                <td id="player-2-victories"></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <!-- Main game section with all 20 cards, with front and back sections -->
+    <div class="game-area">
+        <section class="container">
+            <div class="card" data-image="alien-1">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-1.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-2">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-2.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-3">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-3.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-4">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-4.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-5">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-5.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-6">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-6.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-7">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-7.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-8">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-8.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-9">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-9.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="ufo">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/ufo.svg" alt="ufo" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-1">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-1.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-2">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-2.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-3">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-3.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-4">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-4.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-5">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-5.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-6">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-6.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-7">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-7.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-8">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-8.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="alien-9">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/alien-9.svg" alt="alien" />
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="card" data-image="ufo">
+                <div class="front">
+                    <img src="media/cards/ufo-front-card.svg" alt="ufo logo" />
+                </div>
+                <div class="back">
+                    <img src="media/cards/ufo.svg" alt="ufo" />
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap');
+
+/* If newer grid 'gap' property is not supported, ensure backup for grid is applied */
+
+@supports (gap: 1.5rem) {
+    .game-area {
+        margin: 1.5rem;
+    }
+}
+
+/* General reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background / general styles */
+
+body {
+   background-image: url(media/MO.gif);
+    color: #ffffff;
+    font-family: 'Acme', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Nav holds the heading and game control buttons
+Adding 'right' property to nav reconciles incompatibility between 'fixed' & 'flex' */
+
+nav {
+    border-bottom: 2px solid #413232;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.9;
+    padding: 0 2.5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+nav,
+table {
+    background-color: #413232;
+}
+
+/* Brand image & alien icon SVGs courtesy of flaticon.io */
+
+.brand {
+    padding: 10px 0;
+    width: 80px;
+}
+
+.brand,
+.win-badge-image,
+.medal-title,
+.medal-image {
+    height: auto;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h1,
+#msg-display {
+    color: #ffffff;
+}
+
+/* Area that displays messages to players during game & end of game */
+
+.ui {
+    margin-top: 8%;
+}
+
+.ui,
+table {
+    text-align: center;
+}
+
+/* Game control buttons */
+
+button {
+    border: none;
+    border-radius: 22px;
+    color: #000;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 10px 20px 10px 20px;
+}
+
+button,
+caption,
+#msg-display {
+    font-size: 1.2rem;
+}
+
+button:active {
+    box-shadow: inset 1px 1px 6px #FFF;
+}
+
+.flip-btn {
+    background: #ffffff;
+}
+
+.flip-btn:hover {
+    background: #ffffff;
+}
+
+.reset-game-btn {
+    background: #ffffff;
+}
+
+.reset-game-btn:hover {
+    background: #ffffff;
+}
+
+.reset-wins-btn {
+    background: #D93434;
+}
+
+.reset-wins-btn:hover {
+    background: #FF1919;
+}
+
+/* Scoreboard section */
+
+caption {
+    margin: 30px;
+}
+
+table,
+th,
+td {
+    border: 3px solid #545454;
+    border-collapse: collapse;
+    color: #FFF;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    padding: 1rem;
+}
+
+table,
+.medal-image {
+    margin: auto;
+}
+
+/* Game grid containing all images / cards */
+
+.game-area {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 5%;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Win badge that displays for the winner at the end of the game & medals that are acquired when enough games are won (initially hidden) */
+
+.win-badge-image,
+.medal-title,
+.medal-image {
+    width: 70px;
+}
+
+.medal-title {
+    width: 30px;
+}
+
+/* Set general properties of each individual card */
+
+.game-area div {
+    background-color: #413232;
+    border-radius: 10%;
+    height: 250px;
+    width: 230px;
+}
+
+/* Sections that contain cards in divs */
+
+.container {
+    height: 300px;
+    position: relative;
+    width: 200px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+}
+
+/* Individual card styling */
+
+.card,
+.card div {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    -webkit-transform-origin: 50% 50%;
+}
+
+/* 'Transform' and 'rotate' had a 98% compatibilty rating, so some webkits omitted */
+
+.card div {
+    display: block;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Back of each card & class applied with JS in order to turn card over when clicked */
+
+.card .back,
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Animations: removing cards when pair is found */
+
+@keyframes slide-left {
+    100% {
+        margin-left: -5000px;
+    }
+}
+
+@keyframes slide-up {
+    100% {
+        margin-top: -5000px;
+    }
+}
+
+/* Hide the divs that show a win animation - unnecessary until game over */
+
+.span-container,
+.medal-image {
+    display: none;
+}
+
+/* General styling & spacing between elements */
+
+#msg-display,
+#pvp-display {
+    padding: 20px;
+}
+
+#pvp-display,
+#winner-title,
+#winner-name {
+    font-size: 2.5rem;
+}
+
+/* Animation showing who plays who, which runs after users have entered their names */
+
+@keyframes matchup {
+    0% {
+        font-size: 0;
+        opacity: 0;
+    }
+
+    50% {
+        font-size: 3rem;
+        text-shadow: 2px 2px 12px #74A674;
+    }
+}
+
+/* Animations for winner name displayed at the end of the game */
+
+#winner-title {
+    animation: train 1.8s ease forwards;
+    margin-right: 1rem;
+}
+
+#winner-name {
+    animation: plane 2.8s ease forwards;
+    position: absolute;
+}
+
+/* First half of text slides in from left, 'train' */
+
+@keyframes train {
+    0% {
+        margin-left: -2000px;
+    }
+
+    100% {
+        margin-left: inherit;
+    }
+}
+
+/* Second half of text drops in from top, 'plane' */
+
+@keyframes plane {
+    0% {
+        margin-top: -2000px;
+    }
+
+    100% {
+        margin-top: inherit;
+    }
+}
