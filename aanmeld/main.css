@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: white;
+    overflow: hidden;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.banner {
+    width: 100%;
+    height: 400px;
+    background: url('images/road.jpeg') no-repeat center center;
+    background-size: cover;
+}
+.text-bar {
+    position: relative;
+    padding: 20px;
+    font-size: 28px;
+    background-color: #413232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 300px;
+}
+.text-bar p {
+    margin: 0;
+    color: white;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+}
+.buttons {
+    display: flex;
+    margin-top: 9em;
+    gap: 10px;
+}
+
+.buttons button:hover{
+    background-color: rgba(255, 255, 255, 0.288);
+    color: white;
+    border-radius: 10%;
+}
+
+
+.buttons button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+    appearance: none;
+    border: none;
+    color: white;
+    transition-duration: 0.4s;
+
+}
+.content {
+    display: flex;
+    padding: 20px;
+}
+.content .left {
+    flex: 2;
+    margin: 3rem;
+}
+.content .right {
+    margin: 5px;
+    margin-top: 7em;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #f9f9f9;
+    border: 2px solid #DFDFDB;
+    height: 40em;
+}
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.logo-img{
+    display: flex;
+    float: left;
+    margin-left: 5em;
+    background-color: black;
+}
+
+.info-text{
+    text-align: left;
+}
+
+#aanmeld-button{
+    border: 2px solid #FF8A00;
+}
+

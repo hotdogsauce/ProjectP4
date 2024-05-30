@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: white;
+    overflow: hidden;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    border-radius: 10%;
+    margin-top: 7px;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.banner {
+    width: 100%;
+    height: 400px;
+    background: url('../images/road.jpeg') no-repeat center center;
+    background-size: cover;
+}
+.text-bar {
+    position: relative;
+    padding: 20px;
+    font-size: 28px;
+    background-color: #413232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 2em;
+    overflow: hidden;
+}
+.text-bar p {
+    margin: 0;
+    color: white;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    width: 35%;
+    height: 35%;
+}   
+.content .left {
+    padding: 1em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #f9f9f9;
+    border: 2px solid #DFDFDB;
+    height: 35em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.logo-img{
+    display: flex;
+    float: left;
+    margin-left: 5em;
+    background-color: black;
+}
+
+.info-text{
+    text-align: left;
+}
+
+#game-button{
+    transition: 1s;
+}
+
+.inner-card{
+    position: relative;
+    width: auto;
+    height: 50%;
+    border: 2px solid black;
+}
+
+.inner-card img{
+    position: absolute;
+    
+}
+
+.content:hover{
+    scale: 1.03;
+    transition: 0.2s;
+}
