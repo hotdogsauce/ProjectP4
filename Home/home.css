@@ -7,25 +7,41 @@ body, html {
     background-color: white;
     overflow: hidden;
 }
-.navbar a {
-    float: right;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 20px 20px;
+
+
+.topnav {
+    border-bottom: #D39A88 solid 6px;
+    padding: 21px;
+    overflow: hidden;
+    display: flex;
+    background-color: #413232;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .topnav a {
+    font-family: sans-serif;
+    color: #f2f2f2;
+    padding: 16px 18px;
     text-decoration: none;
-    border-radius: 10%;
-    margin-top: 7px;
-}
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
+    font-size: 27px;
+    font-weight: 700;
+    margin-right: 3vh;
+    margin-left: 3vh;
+  }
+
 .banner {
     width: 100%;
     height: 400px;
     background: url('../images/road.jpeg') no-repeat center center;
     background-size: cover;
+}
+.hamza{
+    margin: 0;
+    padding: 0;
+    width:auto;
+    height: 400px;
+    overflow: hidden;
 }
 .text-bar {
     position: relative;
@@ -49,8 +65,8 @@ body, html {
 .content {
     display: flex;
     padding: 20px;
-    width: 35%;
-    height: 35%;
+    width: fit-content;
+    height: fit-content;
 }   
 .content .left {
     padding: 1em;
@@ -60,9 +76,6 @@ body, html {
     justify-content: flex-end;
     background-color: #f9f9f9;
     border: 2px solid #DFDFDB;
-    height: 35em;
-    margin-top: 5em;
-    margin-bottom: 5em;
 }
 
 .footer {
@@ -88,18 +101,22 @@ body, html {
 }
 
 .inner-card{
-    position: relative;
-    width: auto;
-    height: 50%;
+    margin: 0 !important;
+    padding: 0 !important;
     border: 2px solid black;
 }
 
-.inner-card img{
-    position: absolute;
-    
-}
+/* .inner-card img{
+    display: ;
+} */
 
 .content:hover{
     scale: 1.03;
     transition: 0.2s;
+}
+
+.banner{
+    background-image: url('../images/20240604_134831.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
