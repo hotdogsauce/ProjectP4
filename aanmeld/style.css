@@ -13,6 +13,7 @@ head {
 
 .topnav {
   border-bottom: #D39A88 solid 6px;
+  padding: 21px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
