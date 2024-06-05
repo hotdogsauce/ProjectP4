@@ -4,7 +4,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 .navbar {
-    background-color: white;
+    background-color: burlywood;
     overflow: hidden;
 }
 .navbar a {
@@ -126,4 +126,43 @@ body, html {
 
 #game-button{
     transition: 1s;
+}
+
+.right{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.right img{
+    display: flex;  
+    margin: 0 auto;
+    max-width: 50%;
+    height: 50%;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media(max-width: 768px){
+    .banner{
+        height: auto;
+    }
+    
+    .banner img{
+        width: 100%;
+        height: auto;
+    }
 }
