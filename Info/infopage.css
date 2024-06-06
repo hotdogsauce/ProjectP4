@@ -129,40 +129,54 @@ body, html {
 }
 
 .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
-.right img{
-    display: flex;  
-    margin: 0 auto;
-    max-width: 50%;
-    height: 50%;
+.bilal{
+    margin: 0;
+    padding: 0;
+    width:auto;
+    height: 400px;
+    overflow: hidden;
 }
 
 .banner{
     width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-}
+    height: 400px;
+    background: url('../images/infobanner.jpg') no-repeat center center;
+    background-size: cover;
 
-.banner img{
-    width: 100%;
-    height: auto;
-    display: block;
+
+
 }
 
 @media(max-width: 768px){
-    .banner{
-        height: auto;
+    .right{
+        padding: 15px;
     }
-    
-    .banner img{
-        width: 100%;
-        height: auto;
+
+    .bilal{
+        height: 80px;
     }
+
+}
+
+
+@media(max-width: 480px){
+    .right{
+        padding: 10px;
+    }
+
+    .bilal {
+        height: 60px;
+    }
+
 }
