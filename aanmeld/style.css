@@ -13,35 +13,34 @@ head {
 
 .topnav {
   border-bottom: #D39A88 solid 6px;
-  padding: 21px;
+  padding: 18px;
   overflow: hidden;
   display: flex;
+  background-color: #413232 ;
   justify-content: space-between;
   align-items: stretch;
 }
 
+
 .topnav a {
   font-family: sans-serif;
   color: #f2f2f2;
-  padding: 16px 18px;
+  padding: 18px 20px;
   text-decoration: none;
   font-size: 27px;
-  font-weight: 700;
+  font-weight: 400;
   margin-right: 3vh;
   margin-left: 3vh;
 }
 
-img#logo {
-  width: auto;
-  height: auto;
-  margin: 1vh;
+
+#logo{
+  overflow: hidden;
+  position:absolute;
+  margin-top: -10px;
+  padding: 0;
+  height: 50px;
 }
-
-
-.menu {
-  align-content: center
-}
-
 /* ////////////////// START OF GRIDD!!!!!/////////// */
 
 .grid-container {

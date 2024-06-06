@@ -11,10 +11,10 @@ body, html {
 
 .topnav {
     border-bottom: #D39A88 solid 6px;
-    padding: 21px;
+    padding: 18px;
     overflow: hidden;
     display: flex;
-    background-color: #413232;
+    background-color: #413232 ;
     justify-content: space-between;
     align-items: stretch;
   }
@@ -22,10 +22,10 @@ body, html {
   .topnav a {
     font-family: sans-serif;
     color: #f2f2f2;
-    padding: 16px 18px;
+    padding: 18px 20px;
     text-decoration: none;
     font-size: 27px;
-    font-weight: 700;
+    font-weight: 400;
     margin-right: 3vh;
     margin-left: 3vh;
   }
@@ -84,12 +84,17 @@ body, html {
     color: white;
     text-align: center;
 }
-
-.logo-img{
+.card-section{
     display: flex;
-    float: left;
-    margin-left: 5em;
-    background-color: black;
+    justify-content: fle;
+}
+
+#logo{
+    overflow: hidden;
+    position:absolute;
+    margin-top: -10px;
+    padding: 0;
+    height: 50px;
 }
 
 .info-text{
@@ -105,10 +110,6 @@ body, html {
     padding: 0 !important;
     border: 2px solid black;
 }
-
-/* .inner-card img{
-    display: ;
-} */
 
 .content:hover{
     scale: 1.03;
