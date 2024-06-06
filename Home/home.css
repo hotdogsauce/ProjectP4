@@ -86,7 +86,7 @@ body, html {
 }
 .card-section{
     display: flex;
-    justify-content: fle;
+    justify-content: flex-start;
 }
 
 #logo{
@@ -106,9 +106,10 @@ body, html {
 }
 
 .inner-card{
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
     border: 2px solid black;
+    display:flex ;
 }
 
 .content:hover{

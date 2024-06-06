@@ -140,4 +140,5 @@ body, html {
     margin: 0 !important;
     padding: 0 !important;
     border: 2px solid black;
+    display: flex;
 }
