@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registreer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="../Game/index.html" id="game-button2">GAME</a>
+        <a href="../inlogpagina/login.html">Login</a>
+        <a href="../Contact/Contact.html">Contact</a>
+        <a href="../aanmeld/index.html">Aanmelden</a>
+        <a href="../Home/home.html">Home</a>
+        <img src="../logo.webp" class="logo-img" alt="">
+    </div>
+        
+    <div class="container">
+        <div class="card">
+          <div class="card_title">
+            <h1>Registreer</h1>
+            <span>Heb je al een account? <a href="login.html">Login</a></span>
+          </div>
+          <div class="form">
+          <form action="http://127.0.0.1:5500/ProjectP4/inlogpagina/register.php" method="post">
+            <input type="text" name="username" id="username" placeholder="Gebruikersnaam" />
+            <input type="email" name="email" placeholder="Email" id="email" />
+            <input type="password" name="password" placeholder="Wachtwoord" id="password" />
+            <button type="submit">Registreer</button>
+          </form>
+          </div>
+          <div class="card_terms">
+              <input type="checkbox" name="" id="terms"> <span>
+                Ik heb de <a href="">Servicevoorwaarden</a> gelezen en ga hiermee akkoord </span>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
