@@ -1,95 +1,51 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpagina Layout</title>
     <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
-
 <body>
 
-<<<<<<< HEAD
-    <div class="topnav">
-        <div class="menu">
-            <img id="logo" src="../images/logophoto.png" alt="">
-        </div>
-        <div class="menu">
-            <a class="active" href="../aanmeld/index.html">Aanmelden</a>
-            <a class="active" href="../Info/infopage.html">Info</a>
-            <a class="active" href="../game/index.html">Game</a>
-        </div>
-=======
     <div class="navbar">
-        <a href="../Game/index.html" id="game-button">Game</a>
+        <a href="../Game/index.html" id="game-button">GAME</a>
+        <a href="../inlogpagina/login.html">Login</a>
+        <a href="../inlogpagina/registreer.html">Registreer</a>
+        <a href="../Contact/Contact.html">Contact</a>
         <a href="../aanmeld/index.html">Aanmelden</a>
-        <a href="../Info/infopage.html">Informatie</a>
         <a href="../Home/home.html">Home</a>
         <img src="../logo.webp" class="logo-img" alt="">
->>>>>>> f8e0c29daddb851bf7c4a6a4fe00c01f8c199e72
     </div>
 
     <div class="banner"></div>
 
     <div class="text-bar">
-        <p>Oplijding</p>
+        <p>Info</p>
     </div>
 
-    <section class="card-section">
+    <div class="content" onclick="parent.location='../info/infopage.html'">
 
-        <div class="content" onclick="parent.location='../info/infopage.html'">
-
-            <div class="left">
-                <div class="inner-card">
-                    <img class="hamza" src="../images/20240604_134556.jpg" alt="">
-                </div>
+        <div class="left">
+            <div class="inner-card">
+                <img src="../logo.webp" alt="">
+            </div>
                 <h1>Fotografie</h1><br><br>
                 <p>Niveau 3/4</p>
                 <p>BOL/BBL</p>
                 <p>4 Jaar</p>
-            </div>
-
         </div>
-
-        <div class="content" onclick="parent.location='../info/infopage.html'">
-
-            <div class="left">
-                <div class="inner-card">
-                    <img class="hamza" src="../images/20240604_134556.jpg" alt="">
-                </div>
-                <h1>Fotografie</h1><br><br>
-                <p>Niveau 3/4</p>
-                <p>BOL/BBL</p>
-                <p>4 Jaar</p>
-            </div>
-        </div>
-
-        <div class="content" onclick="parent.location='../info/infopage.html'">
-
-            <div class="left">
-                <div class="inner-card">
-                    <img class="hamza" src="../images/20240604_134556.jpg" alt="">
-                </div>
-                <h1>Fotografie</h1><br><br>
-                <p>Niveau 3/4</p>
-                <p>BOL/BBL</p>
-                <p>4 Jaar</p>
-            </div>
-        </div>
-    </section>
+        
+    </div>
 
     <div class="footer">
-
+        
     </div>
 
     <script src="../../script.js"></script>
 </body>
-
 </html>
